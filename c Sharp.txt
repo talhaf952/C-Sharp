@@ -1,0 +1,37 @@
+using System;
+
+namespace Practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //I am writing Program for Practice Purpose.
+            Console.WriteLine("\n       My Self      ");
+            
+            //So let`s start.
+            Console.WriteLine("My Name is MUhammad.");
+            Console.WriteLine("I am 20 years old.");
+            
+            //Variables.
+            Console.Write("\nEnter 1st your Name: ");
+            string firstName=Console.ReadLine();
+            Console.Write("Enter Last Name: ");
+            string lastName=Console.ReadLine();
+            string name=firstName+" " +lastName;
+            Console.Write("Enter your age: ");
+            int age=Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter your weight: ");
+            double weight=double.Parse(Console.ReadLine());
+            Console.WriteLine("So, "+name+" you are "+age+" years old having "+weight+" kg weight.That is great.");
+            
+            //String 
+            Console.WriteLine("Name contains "+name.Length+ " alphabets.");
+            Console.WriteLine("UpperCase: "+name.ToUpper());
+            Console.WriteLine("LowerCase: "+name.ToLower());
+            
+            
+            
+        }
+    }
+}
