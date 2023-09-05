@@ -1,0 +1,17 @@
+using System;
+using System.Linq;
+
+namespace Practice
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int[] Numbers={12,90,87,36,99};
+            Console.WriteLine("Max of 5 numbers is: "+Numbers.Max());
+            Console.WriteLine("Min of 5 numbers is: "+Numbers.Min());
+            Console.WriteLine("Sum of 5 numbers is: "+Numbers.Sum());
+            Console.WriteLine("Avg of 5 numbers is: "+Numbers.Average());
+        }
+    }
+}
