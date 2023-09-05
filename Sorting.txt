@@ -1,0 +1,36 @@
+using System;
+
+namespace Practice
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            //Array Sorting
+            string[] cars={"B","Z","A","D"};
+            Console.WriteLine("Before Alphabets Sorting.");
+            foreach(string i in cars)
+            {
+                Console.Write(i+" ");
+            }
+            Console.WriteLine("\nAfter Alphabets Sorting.");
+            Array.Sort(cars);
+            foreach(string i in cars)
+            {
+                Console.Write(i+" ");
+            }
+            Console.WriteLine("\n\nBefore Numbers Sorting.");
+            int[] Numbers={10,8,6,4,2,1,3,5,7,9};
+            foreach(int i in Numbers)
+            {
+                Console.Write(i+" ");
+            }
+            Console.WriteLine("\nAfter Numbers Sorting.");
+            Array.Sort(Numbers);
+            foreach(int i in Numbers)
+            {
+                Console.Write(i+" ");
+            }
+        }
+    }
+}
