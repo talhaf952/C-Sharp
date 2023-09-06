@@ -1,0 +1,146 @@
+C Shap 
+
+-----------------------------Comment-----------------------------
+
+// This is a single-line comment
+
+/*
+   This is a
+   multi-line comment
+*/
+
+Console.WriteLine("Hello, World!");
+
+
+-----------------------------Variables-----------------------------
+int age = 20;
+string name = "Talha";
+double salary = 1000000.50;
+
+
+----------------------------- Data Types-----------------------------
+int age = 20;
+string name = "Talha";
+double salary = 1000000.50;
+bool isStudent = false;
+
+
+-----------------------------Type Casting-----------------------------
+double num1 = 10.5;
+int num2 = (int)num1; // Explicit casting
+
+int num3 = 20;
+double num4 = num3; // Implicit casting
+
+
+-----------------------------User Input-----------------------------
+Console.Write("Enter your name: ");
+string name = Console.ReadLine();
+Console.WriteLine($"Assalam-o-Alaikum, {name}!");
+
+
+-----------------------------Operators-----------------------------
+int x = 10;
+int y = 5;
+
+int sum = x + y;
+int difference = x - y;
+int product = x * y;
+int quotient = x / y;
+bool isEqual = x == y;
+bool isGreaterThan = x > y;
+
+
+----------------------------- If...Else-----------------------------
+int age = 18;
+if (age < 18)
+{
+    Console.WriteLine("You are a minor.");
+}
+else if (age >= 18 && age < 65)
+{
+    Console.WriteLine("You are an adult.");
+}
+else
+{
+    Console.WriteLine("You are a senior citizen.");
+}
+
+
+-----------------------------Switch-----------------------------
+char grade = 'B';
+switch (grade)
+{
+    case 'A':
+        Console.WriteLine("Excellent");
+        break;
+    case 'B':
+        Console.WriteLine("Good");
+        break;
+    case 'C':
+        Console.WriteLine("Average");
+        break;
+    default:
+        Console.WriteLine("Not specified");
+        break;
+}
+
+
+-----------------------------While Loop-----------------------------
+int count = 1;
+while (count <= 5)
+{
+    Console.WriteLine($"Iteration {count}");
+    count++;
+}
+
+
+----------------------------- For Loop-----------------------------
+for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine($"Iteration {i}");
+}
+
+
+-----------------------------Arrays-----------------------------
+int[] numbers = { 1, 2, 3, 4, 5 };
+foreach (int number in numbers)
+{
+    Console.WriteLine(number);
+}
+
+Array.Sort(numbers);
+
+int[,] matrix = { { 1, 2 }, { 3, 4 } };
+int element = matrix[0, 1];
+
+
+-----------------------------Methods-----------------------------
+// Method without parameters and return value
+void SayHello()
+{
+    Console.WriteLine("Hello!");
+}
+
+// Method with parameters and return value
+int Add(int a, int b)
+{
+    return a + b;
+}
+
+// Method with default parameter
+void Greet(string name = "Guest")
+{
+    Console.WriteLine($"Hello, {name}!");
+}
+
+// Method overloading
+int Multiply(int a, int b)
+{
+    return a * b;
+}
+
+double Multiply(double a, double b)
+{
+    return a * b;
+}
