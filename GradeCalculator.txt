@@ -1,0 +1,73 @@
+using System;
+namespace std
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            //Welome Message
+            Console.WriteLine("Welcome to Grade Calculator. ");
+            Console.Write("Enter Number of Subjects: ");
+            int subjects=Convert.ToInt32(Console.ReadLine());
+            double marks=0;
+            double totalMarks=0;
+            //Condition
+            for(int i=1;i<=subjects;i++)
+            {
+                Console.Write("Enter Marks out of 100 of "+ i+" Subject: ");
+                marks=double.Parse(Console.ReadLine());
+                if(marks<=100&&marks>=85)
+                {
+                    Console.WriteLine("Grade for Subject "+i+" is: A");
+                }
+                else if(marks<85&&marks>=80)
+                {
+                    Console.WriteLine("Grade for Subject "+i+" is: B");
+                }
+                else if(marks<80&&marks>=70)
+                {
+                    Console.WriteLine("Grade for Subject "+i+" is: C");
+                }
+                else if(marks<70&&marks>=60)
+                {
+                    Console.WriteLine("Grade for Subject "+i+" is: D");
+                }
+                else if(marks<60&&marks>=50)
+                {
+                    Console.WriteLine("Grade for Subject "+i+" is: E");
+                }
+                else
+                {
+                    Console.WriteLine("Grade for Subject "+i+" is: F");
+                }
+                totalMarks= totalMarks+marks;
+
+            }
+            double avg=totalMarks/(subjects);
+            if(avg<=100&&avg>=85)
+            {
+                Console.WriteLine("Your total marks are "+totalMarks+ " out of "+subjects*100+" and grade is A");
+            }
+            else if(avg<85&&avg>=80)
+            {
+                Console.WriteLine("Your total marks are "+totalMarks+ " out of "+subjects*100+" and grade is B");
+            }
+            else if(avg<80&&avg>=70)
+            {
+                Console.WriteLine("Your total marks are "+totalMarks+ " out of "+subjects*100+" and grade is C");
+            }
+            else if(avg<70&&avg>=60)
+            {
+                Console.WriteLine("Your total marks are "+totalMarks+ " out of "+subjects*100+" and grade is D");
+            }
+            else if(avg<60&&avg>=50)
+            {
+                Console.WriteLine("Your total marks are "+totalMarks+ " out of "+subjects*100+" and grade is E");
+            }
+            else 
+            {
+                Console.WriteLine("Your total marks are "+totalMarks+ " out of "+subjects*100+" and grade is F");
+            }
+        }
+    }
+}
