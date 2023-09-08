@@ -1,58 +1,72 @@
 using System;
-namespace std
+
+namespace CalculatorApp
 {
     class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            //Welome Message
-            Console.WriteLine("Welcome to Grade Calculator. ");
-            Console.Write("Enter Number of Subjects: ");
-            int subjects=Convert.ToInt32(Console.ReadLine());
-            double totalMarks=0;
-            //Condition
-            for(int i=1;i<=subjects;i++)
+            Console.WriteLine("Welcome to the Calculator App!");
+
+            double firstNumber, secondNumber;
+            string op;
+
+            // Input validation loop for the first number
+            while (true)
             {
-                Console.Write($"Enter Marks out of 100 for Subject {i} : ");
-                double marks=double.Parse(Console.ReadLine());
-                if(marks>=0&&marks<=100)
-                {
-                    totalMarks+=marks;
-                }
+                Console.Write("Enter the first number: ");
+                if (double.TryParse(Console.ReadLine(), out firstNumber))
+                    break;
                 else
-                {
-                    Console.WriteLine("Invalid marks entered. Marks should be between 0 and 100.");
-                    i--; // Decrement i to re-enter marks for the same subject.
-                }
-                double averageMarks=totalMarks/subjects;
-                string grade;
-                    if (averageMarks >= 85)
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+            }
+
+            // Input validation loop for the second number
+            while (true)
             {
-                grade = "A";
+                Console.Write("Enter the second number: ");
+                if (double.TryParse(Console.ReadLine(), out secondNumber))
+                    break;
+                else
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
             }
-            else if (averageMarks >= 80)
+
+            // Input validation loop for the operator
+            while (true)
             {
-                grade = "B";
+                Console.Write("Choose an operator (+, -, *, /): ");
+                op = Console.ReadLine();
+                if (op == "+" || op == "-" || op == "*" || op == "/")
+                    break;
+                else
+                    Console.WriteLine("Invalid operator. Please enter a valid operator.");
             }
-            else if (averageMarks >= 70)
+
+            double result = 0;
+
+            // Perform the selected operation
+            switch (op)
             {
-                grade = "C";
+                case "+":
+                    result = firstNumber + secondNumber;
+                    break;
+                case "-":
+                    result = firstNumber - secondNumber;
+                    break;
+                case "*":
+                    result = firstNumber * secondNumber;
+                    break;
+                case "/":
+                    if (secondNumber == 0)
+                    {
+                        Console.WriteLine("Error: Division by zero is not allowed.");
+                        return; // Exit the program
+                    }
+                    result = firstNumber / secondNumber;
+                    break;
             }
-            else if (averageMarks >= 60)
-            {
-                grade = "D";
-            }
-            else if (averageMarks >= 50)
-            {
-                grade = "E";
-            }
-            else
-            {
-                grade = "F";
-            }
-            Console.WriteLine($"Average marks: {averageMarks:F2}");
-            Console.WriteLine($"Grade: {grade}");
-            }
+
+            Console.WriteLine($"Result: {firstNumber} {op} {secondNumber} = {result}");
         }
     }
 }
