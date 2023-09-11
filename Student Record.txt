@@ -1,0 +1,23 @@
+using System;
+namespace std
+{
+    class StudentRecord
+    {
+    static void Main(string[] Args)
+    {
+    Console.WriteLine("Welcome to Student Record!");
+    Console.Write("Enter Name of Student: ");
+    string name=Console.ReadLine();
+    Console.Write("Enter Age of Student: ");
+    int age=Convert.ToInt32(Console.ReadLine());
+    Console.Write("Enter Grade of Student: ");
+    string grade=Console.ReadLine();
+    string[] Student=new string[]{name,age.ToString(),grade};
+    
+    Console.WriteLine("\n Student Information.");
+    Console.WriteLine($" Name: {Student[0]}");
+    Console.WriteLine($"Age: {Student[1]}");
+    Console.WriteLine($" Grade: {Student[2]}");
+    }
+}
+}
