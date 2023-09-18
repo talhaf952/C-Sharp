@@ -1,0 +1,35 @@
+using System;
+    namespace Algorithms
+    {
+        class Program{
+            public static void Main(string[] args)
+            {
+                Console.Write("Entr any Whole Number: ");
+                int number= Convert.ToInt32(Console.ReadLine()); 
+                int[] arr=new int[number];
+                for(int i=0; i<number; i++)
+                {
+                    arr[i]=Convert.ToInt32(Console.ReadLine()); 
+                }
+                
+                for(int i=0;i<number-1;i++)
+                {
+                    for(int j=i+1;j<number;j++)
+                    {
+                        if(arr[j]<arr[i])
+                        {
+                            int temp=arr[j];
+                            arr[j]=arr[i];
+                            arr[i]=temp;
+                        }
+                    }
+                }
+                Console.WriteLine("After Sorting in Ascending order: ");
+                for(int i=0;i<number;i++)
+                {
+                    Console.Write(arr[i]+" ");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
