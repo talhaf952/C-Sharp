@@ -1,0 +1,29 @@
+using System;
+namespace std
+{
+    class FunctionCalculator
+    {
+        double sum(double a,double b)
+        {
+            return a+b;
+        }
+        double sub(double a,double b)
+        {
+            return a-b;
+        }
+        double mul(double a,double b)
+        {
+            return a*b;
+        }
+        double div(double a,double b)
+        {
+            return a/b;
+        }
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to Calculator using Function. ");
+            
+            
+        }
+    }
+}
