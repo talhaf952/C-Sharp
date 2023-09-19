@@ -3,27 +3,64 @@ namespace std
 {
     class FunctionCalculator
     {
-        double sum(double a,double b)
+        static double Add(double a,double b)
         {
             return a+b;
         }
-        double sub(double a,double b)
+        static double Subtract(double a,double b)
         {
             return a-b;
         }
-        double mul(double a,double b)
+        static double Multiply(double a,double b)
         {
             return a*b;
         }
-        double div(double a,double b)
+        static double Divide(double a,double b)
         {
+            if(b==0)
+            {
+                Console.WriteLine("Error: Division by zero is undefined.");
+                return double.NaN;
+            }
             return a/b;
         }
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Calculator using Function. ");
-            
-            
+            while(true)
+            {
+                Console.WriteLine("Enter two Numbers:");
+                Console.Write("1st Number:");
+                double firstNumber=double.Parse(Console.ReadLine());
+                Console.Write("2nd Number:");
+                double secondNumber=double.Parse(Console.ReadLine());
+                Console.Write("Choose an operator to perform relative operation(/, *, +, -) or type 'exit' to quit:\t");
+                string op=Console.ReadLine();
+                if(op.ToLower()=="exit")
+                {
+                    Console.WriteLine("Goodbye!");
+                    break; // Exit the program
+                }
+                double result = 0;
+                switch(op)
+                {
+                    case "+":
+                        result = Add(firstNumber, secondNumber);
+                        break;
+                    case "-":
+                        result = Subtract(firstNumber, secondNumber);
+                        break;
+                    case "*":
+                        result = Multiply(firstNumber, secondNumber);
+                        break;
+                    case "/":
+                        result = Divide(firstNumber, secondNumber);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid operation. Please choose from +, -, *, /");
+                        continue; // Continue to the next iteration of the loop.
+                }
+                Console.WriteLine($"Result: {result}");
+            }
         }
     }
 }
