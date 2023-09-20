@@ -5,15 +5,14 @@ namespace std
     {
         string name="Lion";
        string color="Brown";
-       int feet=4;
+       int feet=2;
        int eyes=2;
+       string fly="can not fly.";
        public static void Main(string[] args)
         {
             Animal obj=new Animal();
-            Console.WriteLine(obj.name);
-            Console.WriteLine(obj.color);
-            Console.WriteLine(obj.feet);
-            Console.WriteLine(obj.eyes);
+            Console.WriteLine($"{obj.name} having {obj.color} color with {obj.feet} feet, {obj.eyes} eyes, {obj.fly} ");
+ 
         }
     }
 }
