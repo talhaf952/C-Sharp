@@ -1,0 +1,20 @@
+using System;
+namespace std
+{
+    class Animal
+    {
+        string name="Lion";
+       string color="Brown";
+       int feet=4;
+       int eyes=2;
+       public static void Main(string[] args)
+        {
+            Animal obj=new Animal();
+            Console.WriteLine(obj.name);
+            Console.WriteLine(obj.color);
+            Console.WriteLine(obj.feet);
+            Console.WriteLine(obj.eyes);
+        }
+    }
+}
+
