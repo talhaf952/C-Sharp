@@ -1,47 +1,56 @@
 using System;
-namespace std
+
+namespace FunctionCalculatorApp
 {
     class FunctionCalculator
     {
-        static double Add(double a,double b)
+        // Method for addition
+        static double Add(double a, double b)
         {
-            return a+b;
+            return a + b;
         }
-        static double Subtract(double a,double b)
+
+        // Method for subtraction
+        static double Subtract(double a, double b)
         {
-            return a-b;
+            return a - b;
         }
-        static double Multiply(double a,double b)
+
+        // Method for multiplication
+        static double Multiply(double a, double b)
         {
-            return a*b;
+            return a * b;
         }
-        static double Divide(double a,double b)
+
+        // Method for division
+        static double Divide(double a, double b)
         {
-            if(b==0)
+            if (b == 0)
             {
                 Console.WriteLine("Error: Division by zero is undefined.");
-                return double.NaN;
+                return double.NaN; // NaN (Not-a-Number) indicates an error.
             }
-            return a/b;
+            return a / b;
         }
-        public static void Main(string[] args)
+
+        static void Main(string[] args)
         {
-            while(true)
+            Console.WriteLine("Welcome to Function Calculator!");
+
+            while (true)
             {
-                Console.WriteLine("Enter two Numbers:");
-                Console.Write("1st Number:");
-                double firstNumber=double.Parse(Console.ReadLine());
-                Console.Write("2nd Number:");
-                double secondNumber=double.Parse(Console.ReadLine());
-                Console.Write("Choose an operator to perform relative operation(/, *, +, -) or type 'exit' to quit:\t");
-                string op=Console.ReadLine();
-                if(op.ToLower()=="exit")
-                {
-                    Console.WriteLine("Goodbye!");
-                    break; // Exit the program
-                }
+                Console.Write("Enter the first number: ");
+                double firstNumber = double.Parse(Console.ReadLine());
+
+                Console.Write("Enter the second number: ");
+                double secondNumber = double.Parse(Console.ReadLine());
+
+                Console.Write("Choose an operation (+, -, *, /):  ");
+                string operation = Console.ReadLine();
+
                 double result = 0;
-                switch(op)
+
+                switch (operation)
                 {
                     case "+":
                         result = Add(firstNumber, secondNumber);
@@ -56,10 +65,20 @@ namespace std
                         result = Divide(firstNumber, secondNumber);
                         break;
                     default:
-                        Console.WriteLine("Invalid operation. Please choose from +, -, *, /");
+                        Console.WriteLine("Invalid operation. Please choose from +, -, *, / or type 'exit' to quit.");
                         continue; // Continue to the next iteration of the loop.
                 }
+
                 Console.WriteLine($"Result: {result}");
+                
+                Console.Write("Type 'exit' to quit or press Enter to continue: ");
+                operation = Console.ReadLine();
+
+                if (operation.ToLower() == "exit")
+                {
+                    Console.WriteLine("Goodbye!");
+                    break; // Exit the program
+                }
             }
         }
     }
