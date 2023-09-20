@@ -1,0 +1,19 @@
+using System;
+namespace std
+{
+    class Bird
+    {
+        string name="Eagle";
+       string color="Black, Brown and white";
+       int feet=2;
+       int eyes=2;
+       string fly="can fly.";
+       public static void Main(string[] args)
+        {
+            Bird obj=new Bird();
+            Console.WriteLine($"{obj.name} having {obj.color} color with {obj.feet} feet, {obj.eyes} eyes, {obj.fly} ");
+ 
+        }
+    }
+}
+
