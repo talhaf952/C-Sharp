@@ -6,8 +6,8 @@ namespace NumberGuessingGame
         public static void Main(string[] args)
         {
             Console.WriteLine("'Welcome to adding Random Numbers App!'\n");
-            Console.Write("Enter Number of Turns: ");
-            int Turns=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Here you have 6 turns. Computer will automatically generate random numbers 6 times and then will add all. \nIf your add becomes 20 or more, you will 'win' other wise 'lose'.");
+            int Turns=6;
             int sum=0;
             for(int i=1;i<=Turns;i++)
             {
@@ -18,7 +18,8 @@ namespace NumberGuessingGame
                 sum=sum+num;
             }
             Console.WriteLine($"Sum of Random Numbers is : {sum}.");
-            
+            string result=(sum>=20)?"Congratulation! You won":"Sorry to say but you lose. Better luck next time.";
+            Console.WriteLine(result);           
             
 
         }
