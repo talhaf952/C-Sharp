@@ -6,10 +6,20 @@ namespace NumberGuessingGame
         public static void Main(string[] args)
         {
             Console.WriteLine("'Welcome to Number Guessing Game!'\n");
+            Console.Write("Enter Number of Turns: ");
+            int Turns=Convert.ToInt32(Console.ReadLine());
+            int sum=0;
+            for(int i=1;i<=Turns;i++)
+            {
+                Console.Write($"Generate {i} Random Number: ");
+                Random random=new Random();
+                int num=random.Next(0,7);
+                Console.WriteLine(num); 
+                sum=sum+num;
+            }
+            Console.WriteLine($"Sum of Random Numbers is : {sum}.");
             
-            Random random=new Random();
-            int num=random.Next(0,7);
-            Console.WriteLine(num);
+            
 
         }
     }
