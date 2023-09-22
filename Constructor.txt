@@ -1,0 +1,24 @@
+using System;
+namespace MyApp
+{
+    class Car
+    {
+        public string brand;
+        public string color;
+        public string model;
+        
+        //Create Class Constructor
+        public Car(string brand, string color, string model)
+        {
+            this.brand=brand;
+            this.color=color;
+            this.model=model;
+        }
+        
+        static void Main(string[] args)
+        {
+            Car obj=new Car("Honda","White","2023");
+            Console.WriteLine($"Car Brand: {obj.brand}\nCar Color: {obj.color}\nCar Model: {obj.model}");
+        }
+    }
+}
