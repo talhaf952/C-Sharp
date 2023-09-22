@@ -19,7 +19,7 @@ namespace MyApp
         {
             Car obj=new Car("Honda","White","2023");
             Car bike=new Car("Yamaha","Red","2022");
-            Console.WriteLine($"Car Brand: {obj.brand}\nCar Color: {obj.color}\nCar Model: {obj.model}");
+            Console.WriteLine($"Car Brand: {obj.brand}\nCar Color: {obj.color}\nCar Model: {obj.model}\n");
             Console.WriteLine($"Bike Brand: {bike.brand}\nBike Color: {bike.color}\nBike Model: {bike.model}");
         }
     }
