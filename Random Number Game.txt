@@ -11,16 +11,25 @@ namespace NumberGuessingGame
             int sum=0;
             for(int i=1;i<=Turns;i++)
             {
-                Console.Write($"Generate {i} Random Number: ");
+                Console.Write($"{i} Random Number: ");
                 Random random=new Random();
-                int num=random.Next(0,7);
+                int num=random.Next(1,7);
                 Console.WriteLine(num); 
                 sum=sum+num;
             }
             Console.WriteLine($"Sum of Random Numbers is : {sum}.");
-            string result=(sum>=20)?"Congratulation! You won":"Sorry to say but you lose. Better luck next time.";
-            Console.WriteLine(result);           
-            
+            if(sum<=20)
+            {
+                Console.WriteLine("Fair Turns.");
+            }
+            else if(sum<=25&&sum>20)
+            {
+                Console.WriteLine("Good Turns.");
+            }
+            else
+            {
+                Console.WriteLine("Best Turns.");
+            }
 
         }
     }
