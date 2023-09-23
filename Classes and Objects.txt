@@ -1,0 +1,51 @@
+using System;
+namespace Progr
+{
+public class Dog {
+	string name;
+	string breed;
+	int age;
+	string color;
+
+	public Dog(string name, string breed,int age, string color)
+	{
+		this.name = name;
+		this.breed = breed;
+		this.age = age;
+		this.color = color;
+	}
+
+	public string GetName()
+	{
+		return name;
+	}
+
+	public string GetBreed()
+	{
+		return breed;
+	}
+
+	public int GetAge()
+	{
+		return age;
+	}
+
+	public string GetColor()
+	{
+		return color;
+	}
+
+	public string ToString()
+	{
+		return ("Hi my name is " + this.GetName()+ ".\nMy breed, age and color are " + this.GetBreed()+ ", " + this.GetAge() + ", " + this.GetColor());
+	}
+
+public static void Main(String[] args)
+	{
+		
+		// Creating object
+		Dog tuffy = new Dog("Talha", "papillon", 5, "white");
+		Console.WriteLine(tuffy.ToString());
+	}
+}
+}
