@@ -44,7 +44,7 @@ public static void Main(String[] args)
 	{
 		
 		// Creating object
-		Dog tuffy = new Dog("Talha", "papillon", 5, "white");
+		Dog tuffy = new Dog("Talha", "Khaki", 5, "Brown");
 		Console.WriteLine(tuffy.ToString());
 	}
 }
