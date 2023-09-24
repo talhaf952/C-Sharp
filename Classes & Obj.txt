@@ -11,7 +11,7 @@ namespace ClassObject {
       // create Employee object 
       Employee Talha = new Employee();
 
-      // set department for sheeran
+      // set department for Talha
       Talha.department = "Software Engineer";
       Console.WriteLine("Talha: " + Talha.department);
 
