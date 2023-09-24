@@ -1,0 +1,28 @@
+using System;
+
+namespace ClassObject {
+
+  class Employee {
+
+    string department;
+
+    static void Main(string[] args) {
+
+      // create Employee object 
+      Employee Talha = new Employee();
+
+      // set department for sheeran
+      Talha.department = "Software Engineer";
+      Console.WriteLine("Talha: " + Talha.department);
+
+      // create second object of Employee
+      Employee Ali = new Employee();
+
+      // set department for taylor
+      Ali.department = "Software Engineer";
+      Console.WriteLine("Ali: " + Ali.department);
+
+      Console.ReadLine();
+    }
+  }
+}
