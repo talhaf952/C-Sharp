@@ -1,0 +1,23 @@
+using System;
+namespace AccessModifier
+{
+    //private Modifier
+    class Program
+    {
+        string name="Talha";
+        private int age=25;
+    }
+    class Intro
+    {
+        public static void Main(string[] args)
+        {
+            Program obj=new Program();
+            Console.WriteLine(obj.name);
+            Console.WriteLine(obj.age);
+        }
+    }
+}
+
+/*main.cs(15,35): error CS0122: `AccessModifier.Program.name' is inaccessible due to its protection level
+main.cs(16,35): error CS0122: `AccessModifier.Program.age' is inaccessible due to its protection level
+Compilation failed: 2 error(s), 0 warnings*/
