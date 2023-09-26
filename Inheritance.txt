@@ -1,0 +1,37 @@
+using System;
+namespace Inheritance
+{
+//Base Class
+class Vehicle 
+{
+    //Field
+  public string brand = "Suzuki";
+  //method
+  public void honk()
+  {                    
+    Console.WriteLine("POoonnn, PIiiinn!");
+  }
+}
+
+//Derived Class
+class Car : Vehicle
+{
+    //Field
+  public string modelName = "Switz"; 
+}
+
+class Program
+{
+  static void Main(string[] args)
+  {
+    // Create Object
+    Car myCar = new Car();
+
+    // Call Method
+    myCar.honk();
+
+    // Display the value
+    Console.WriteLine(myCar.brand + " " + myCar.modelName);
+  }
+}
+}
