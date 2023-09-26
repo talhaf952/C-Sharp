@@ -1,0 +1,19 @@
+using System;
+
+namespace MyApplication
+{
+  class Person
+  {
+    public string Name    // property
+    { get; set; }  
+  }
+  class Program
+  {  
+    static void Main(string[] args)
+    {
+      Person obj = new Person();
+      obj.Name = "Talha";
+      Console.WriteLine(obj.Name);
+    }
+  }
+}
