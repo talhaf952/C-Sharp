@@ -17,4 +17,14 @@ namespace MyApplication
             Console.WriteLine("The dog says: bow bow");
         }
     }
+    
+    class Program
+  {
+    public static void Main(string[] args)
+    {
+      Dog obj = new Dog();
+      obj.animalSound();
+      obj.sleep();
+    }
+  }
 }
