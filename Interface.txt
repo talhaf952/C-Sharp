@@ -10,8 +10,12 @@ namespace MyApplication
   {
       void secondMethod();
   }
+  interface IThirdInterface
+  {
+      void thirdMethod();
+  }
 
-  class DemoClass : IFirstInterface,ISecondInterface
+  class DemoClass : IFirstInterface,ISecondInterface,IThirdInterface
   {
     public void firstMethod()
     {
@@ -21,6 +25,11 @@ namespace MyApplication
     {
         Console.WriteLine("2nd Method.");
     }
+    public void thirdMethod()
+    {
+        Console.WriteLine("3rd Method.");
+    }
+    
   }
 
   class Program
@@ -30,6 +39,7 @@ namespace MyApplication
       DemoClass myObj = new DemoClass();
       myObj.firstMethod();
       myObj.secondMethod();
+      myObj.thirdMethod();
     }
   }
 }
