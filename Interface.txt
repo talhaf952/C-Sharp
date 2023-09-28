@@ -1,0 +1,26 @@
+using System;
+
+namespace MyApplication
+{
+  interface IFirstInterface
+  {
+    void firstMethod();
+  }
+
+  class DemoClass : IFirstInterface
+  {
+    public void firstMethod()
+    {
+      Console.WriteLine("1st Method.");
+    }
+  }
+
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      DemoClass myObj = new DemoClass();
+      myObj.firstMethod();
+    }
+  }
+}
