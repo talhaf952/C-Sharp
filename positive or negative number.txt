@@ -17,3 +17,6 @@ class program
         {
             Console.WriteLine("Number is negative");
         }
+ Console.ReadLine();
+    }
+}
