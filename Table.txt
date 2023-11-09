@@ -1,20 +1,25 @@
-
 using System;
-
-public class Table
+class Multipication
 {
-    public static void Main(string[] args)
+    static void Main()
     {
-       int number;
+        int number;
  
         Console.Write("Enter a number : ");
         number = Convert.ToInt32(Console.ReadLine());
         while (number <= 0)
         {
             Console.WriteLine("You entered an invalid number");
+ 
             Console.Write("Enter a number great than 0: ");
             number = Convert.ToInt32(Console.ReadLine());
         }
-        
+        Console.WriteLine("Table of "+number+" is given below");
+        for (int i = 1; i <= 10; i++)
+        {
+                Console.WriteLine(number+" * "+i+" = "+ i*number);
+                
+        }
+        Console.Read();
     }
 }
