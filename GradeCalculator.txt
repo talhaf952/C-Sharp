@@ -67,3 +67,7 @@ namespace CalculatorApp
                     break;
             }
 
+            Console.WriteLine($"Result: {firstNumber} {op} {secondNumber} = {result}");
+        }
+    }
+}
