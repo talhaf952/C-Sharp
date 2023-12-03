@@ -57,16 +57,4 @@ namespace CalculatorApp
                     result = firstNumber * secondNumber;
                     break;
                 case "/":
-                    if (secondNumber == 0)
-                    {
-                        Console.WriteLine("Error: Division by zero is not allowed.");
-                        return; // Exit the program
-                    }
-                    result = firstNumber / secondNumber;
-                    break;
-            }
 
-            Console.WriteLine($"Result: {firstNumber} {op} {secondNumber} = {result}");
-        }
-    }
-}
