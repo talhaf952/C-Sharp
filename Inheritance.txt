@@ -32,3 +32,5 @@ class Program
 
     // Display the value
     Console.WriteLine(myCar.brand + " " + myCar.modelName);
+  }
+}
